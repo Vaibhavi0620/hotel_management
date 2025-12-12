@@ -1,0 +1,50 @@
+<!-- book_room.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Book Room — Hotel Lakshmi Niwas</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="topbar">
+        <h1>📅 Book Your Room</h1>
+        <p class="lead">Select from our premium accommodations</p>
+    </header>
+
+    <main class="center">
+        <div class="room-info">
+            <h3>🏠 Available Rooms</h3>
+            <div class="room-grid" id="roomList"></div>
+        </div>
+
+        <div class="card">
+            <form id="bookForm">
+                <div class="form-group">
+                    <label>Guest Name:</label>
+                    <input type="text" name="name" placeholder="Enter full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Room No:</label>
+                    <input type="number" name="room_id" placeholder="101" required id="roomInput">
+                </div>
+                <div class="form-group">
+                    <label>Check-in:</label>
+                    <input type="date" name="check_in" required>
+                </div>
+                <div class="form-group">
+                    <label>Check-out:</label>
+                    <input type="date" name="check_out" required>
+                </div>
+                <button type="submit" class="btn primary full-width" id="bookBtn">Confirm Booking</button>
+                <div id="bookingStatus" class="status-message"></div>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        initPage('book');
+    </script>
+</body>
+</html>

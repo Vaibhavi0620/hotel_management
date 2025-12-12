@@ -1,0 +1,40 @@
+<!-- success.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Success — Hotel Lakshmi Niwas</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="center success-page">
+        <div class="success-container">
+            <div class="success-icon">✔</div>
+            <h1>Operation Successful!</h1>
+            <p>Your request has been processed at <strong>Hotel Lakshmi Niwas</strong></p>
+            
+            <div id="successMessage" class="success-message">
+                Processing your details...
+            </div>
+
+            <div class="booking-details">
+                <h3>🏨 Current Hotel Status</h3>
+                <div class="stats-grid" id="hotelStats">
+                    <!-- Live stats populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="button-group">
+                <a href="index.html" class="btn primary">🏠 Back to Home</a>
+                <a href="book_room.html" class="btn secondary">📅 Book Another Room</a>
+                <a href="cancel_booking.html" class="btn outline">❌ Manage Bookings</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        initPage('success');
+    </script>
+</body>
+</html>

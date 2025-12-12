@@ -1,0 +1,66 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Hotel Lakshmi Niwas — Home</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="topbar">
+        <h1>🏨 Hotel Lakshmi Niwas</h1>
+        <p class="lead">Premium Accommodation in Indian Hospitality Tradition</p>
+    </header>
+
+    <main class="center">
+        <div class="dashboard">
+            <h2>📊 Live Booking Dashboard</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number" id="totalRooms">6</span>
+                    <span class="stat-label">Total Rooms</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="availableRooms">4</span>
+                    <span class="stat-label">Available</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="bookedRooms">2</span>
+                    <span class="stat-label">Booked</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="activeBookings">3</span>
+                    <span class="stat-label">Active Bookings</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card actions">
+            <a class="btn primary" href="book_room.html">📅 Book Room</a>
+            <a class="btn primary" href="cancel_booking.html">❌ Cancel Booking</a>
+            <a class="btn primary" href="#" onclick="showQuickSearch()">🔍 Search</a>
+        </div>
+
+        <div class="rooms-overview" id="quickStatus">
+            <!-- Room status populated by JS -->
+        </div>
+    </main>
+
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <h3>🔍 Quick Search</h3>
+            <input type="number" id="quickSearchInput" placeholder="Booking ID or Room #" class="input-full">
+            <div class="modal-buttons">
+                <button class="btn primary" onclick="performQuickSearch()">Search</button>
+                <button class="btn secondary" onclick="closeQuickSearch()">Close</button>
+            </div>
+            <div id="searchResult" class="search-result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        initPage('home');
+    </script>
+</body>
+</html>

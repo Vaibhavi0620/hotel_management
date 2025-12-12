@@ -1,0 +1,39 @@
+<!-- cancel_booking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Cancel Booking — Hotel Lakshmi Niwas</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="topbar">
+        <h1>❌ Cancel Booking</h1>
+        <p class="lead">Manage your existing reservations</p>
+    </header>
+
+    <main class="center">
+        <div class="booking-info">
+            <h3>📋 Active Bookings</h3>
+            <div class="booking-grid" id="bookingList"></div>
+        </div>
+
+        <div class="card">
+            <form id="cancelForm">
+                <div class="form-group">
+                    <label>Booking ID:</label>
+                    <input type="number" name="booking_id" placeholder="1001" required id="bookingInput">
+                </div>
+                <button type="submit" class="btn primary full-width" id="cancelBtn">Cancel Booking</button>
+                <div id="cancelStatus" class="status-message"></div>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        initPage('cancel');
+        
+    </script>
+</body>
+</html>

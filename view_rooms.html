@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Rooms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Available Rooms</h1>
+
+<table id="roomsTable">
+    <tr>
+        <th>Room ID</th>
+        <th>Type</th>
+        <th>Price</th>
+    </tr>
+</table>
+
+<script>
+fetch("http://localhost:18080/rooms")
+    .then(res => res.json())
+    .then(data => {
+        let table = document.getElementById("roomsTable");
+        data.forEach(room => {
+            table.innerHTML += `
+                <tr>
+                    <td>${room.room_id}</td>
+                    <td>${room.type}</td>
+                    <td>₹ ${room.price}</td>
+                </tr>
+            `;
+        });
+    });
+</script>
+
+<br>
+<a class="menu" href="index.html">⬅ Back to Home</a>
+
+</body>
+</html>
